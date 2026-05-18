@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
+ 
 <body>
-
+ 
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
@@ -23,7 +23,7 @@
                 <span></span>
                 <span></span>
             </label>
-
+ 
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Beranda</a></li>
@@ -33,50 +33,76 @@
             </nav>
         </div>
     </header>
-
+ 
     <main>
         <section class="section">
             <div class="container">
-                <h1>Ajukan Layanan Akademik</h1>
-                <p class="section-desc">Pilih dan isi formulir layanan yang Anda butuhkan di bawah ini.</p>
-
-                <div id="ska" class="service-box">
-                    <h2>📄 Surat Aktif Kuliah (SKA)</h2>
-                    <p>Formulir pengajuan surat keterangan aktif sebagai mahasiswa.</p>
-                    <input type="text" placeholder="NIM Anda...">
-                    <input type="text" placeholder="Keperluan Surat...">
-                    <button class="btn btn-primary" style="margin-top: 12px;">Kirim Pengajuan SKA</button>
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1>Ajukan Layanan Akademik</h1>
+                    <p class="section-desc">Pilih dan isi formulir layanan yang Anda butuhkan di bawah ini.</p>
                 </div>
-
-                <div id="cak" class="service-box">
-                    <h2>📅 Cuti Akademik (CAK)</h2>
-                    <p>Formulir permohonan izin cuti sementara.</p>
-                    <input type="text" placeholder="NIM Anda...">
-                    <input type="text" placeholder="Alasan Cuti...">
-                    <button class="btn btn-primary" style="margin-top: 12px;">Kirim Pengajuan CAK</button>
+                
+                <form action="#" method="post" class="form-card">
+                    <fieldset>
+                        <legend>Data Pengajuan</legend>
+                        
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nim">NIM</label>
+                                <input type="text" id="nim" name="nim" placeholder="Contoh: 24122442" maxlength="8" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prodi">Program Studi</label>
+                                <select id="prodi" name="prodi" required>
+                                    <option value="" disabled selected>- Pilih Program Studi -</option>
+                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Manajemen">Manajemen</option>
+                                    <option value="Akuntansi">Akuntansi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="layanan">Jenis Layanan</label>
+                                <select id="layanan" name="layanan" required>
+                                    <option value="">-Pilih Layanan-</option>
+                                    <option value="SKA">SKA - Surat Aktif Kuliah</option>
+                                    <option value="CAK">CAK - Cuti Akademik</option>
+                                    <option value="TNM">TNM - Transkrip Nilai</option>
+                                    <option value="PDA">PDA - Perubahan Data</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Pengajuan</label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label for="keterangan">Keterangan (Opsional)</label>
+                            <textarea id="keterangan" name="keterangan" rows="3" placeholder="Jelaskan alasan pengajuan Anda..."></textarea>
+                        </div>
+ 
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
+                            <button type="reset" class="btn btn-outline">🔁 Reset</button>
+                        </div>
+                    </fieldset>
+                </form>
+ 
+                <div style="text-align: center; margin-top: 32px;">
+                    <a href="index.html" class="btn btn-outline">← Kembali ke Beranda</a>
                 </div>
-
-                <div id="tnm" class="service-box">
-                    <h2>📜 Transkrip Nilai (TNM)</h2>
-                    <p>Permintaan cetak dokumen rekap nilai mata kuliah.</p>
-                    <input type="text" placeholder="NIM Anda...">
-                    <input type="text" placeholder="Email Tujuan Pengiriman...">
-                    <button class="btn btn-primary" style="margin-top: 12px;">Kirim Pengajuan TNM</button>
-                </div>
-
-                <div id="pda" class="service-box">
-                    <h2>✏️ Perubahan Data (PDA)</h2>
-                    <p>Formulir pembaruan data diri di sistem akademik.</p>
-                    <input type="text" placeholder="NIM Anda...">
-                    <input type="text" placeholder="Data yang Ingin Diubah...">
-                    <button class="btn btn-primary" style="margin-top: 12px;">Kirim Pengajuan PDA</button>
-                </div>
-
-                <a href="index.html" class="btn btn-outline" style="margin-top: 24px;">← Kembali ke Beranda</a>
             </div>
         </section>
     </main>
-
+ 
     <footer class="footer">
         <div class="container footer-inner">
             <div>
@@ -98,7 +124,7 @@
             </div>
         </div>
     </footer>
-
+ 
 </body>
-
+ 
 </html>
