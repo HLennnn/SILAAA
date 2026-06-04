@@ -42,23 +42,23 @@
                     <p class="section-desc">Pilih dan isi formulir layanan yang Anda butuhkan di bawah ini.</p>
                 </div>
                 
-                <form action="#" method="post" class="form-card">
+                <form action="#" method="post" class="form-card" onsubmit="return validasiForm()">
                     <fieldset>
                         <legend>Data Pengajuan</legend>
                         
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
-                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nim">NIM</label>
-                                <input type="text" id="nim" name="nim" placeholder="Contoh: 24122442" maxlength="8" required>
+                                <input type="text" id="nim" name="nim" placeholder="Contoh: 24122442" maxlength="8">
                             </div>
                             <div class="form-group">
                                 <label for="prodi">Program Studi</label>
-                                <select id="prodi" name="prodi" required>
+                                <select id="prodi" name="prodi">
                                     <option value="" disabled selected>- Pilih Program Studi -</option>
                                     <option value="Sistem Informasi">Sistem Informasi</option>
                                     <option value="Teknik Informatika">Teknik Informatika</option>
@@ -70,7 +70,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="layanan">Jenis Layanan</label>
-                                <select id="layanan" name="layanan" required>
+                                <select id="layanan" name="layanan">
                                     <option value="">-Pilih Layanan-</option>
                                     <option value="SKA">SKA - Surat Aktif Kuliah</option>
                                     <option value="CAK">CAK - Cuti Akademik</option>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tanggal">Tanggal Pengajuan</label>
-                            <input type="date" id="tanggal" name="tanggal" required>
+                            <input type="date" id="tanggal" name="tanggal">
                         </div>
  
                         <div class="form-group">
@@ -124,7 +124,7 @@
             </div>
         </div>
     </footer>
- 
+    <script src="js/script.js"></script>
 </body>
  
 </html>
