@@ -41,5 +41,4 @@ function validasiForm() {
         'Layanan: ' + layanan + '\n' +
         'Tanggal: ' + formatTanggal(tanggal));
     return true;
-
 }
